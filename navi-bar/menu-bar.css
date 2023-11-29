@@ -69,7 +69,7 @@ body {
 .navigation ul li a .icon {
   position: relative;
   display: block;
-  line-height: 75px;
+  line-height: 80px;
   font-size: 1.5em;
   text-align: center;
   transition: 0.5s;
@@ -79,6 +79,7 @@ body {
 .navigation ul li.active a .icon {
   transform: translateY(-8px);
   opacity: 1;
+  
   color: var(--navigation-active-icon);
   
 }
@@ -91,7 +92,7 @@ body {
   background: var(--navigation-background);
   cursor: pointer;
   
-  bottom: 15px;
+  bottom: 13px;
   left: 19px;
   width: 53px;
   height: 53px;
