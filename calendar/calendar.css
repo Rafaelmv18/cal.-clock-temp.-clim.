@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+:root {
+  --body-background: grey;
+  --warpper-background-color: #fff;
+  --warpper-color: black;
+  --warpper-border: 2px solid #333;
+  --header-icons-hover: rgba(224, 221, 221, 0.8);
+  --calendar-li: #333;
+  --days-li-not-active-hover-before: #f2f2f2;
+  --switch-bg-url: url(moon-stars.svg);
+  --button-color: #333;
+}
+
+.dark {
+  --body-background: #222;
+  --warpper-background-color: #222;
+  --warpper-color: #fff;
+  --warpper-border: 2px solid #fff;
+  --header-icons-hover: rgba(255, 255, 255, 0.096);
+  --calendar-li: #fff;
+  --days-li-not-active-hover-before: #333;
+  --switch-bg-url: url(sun.svg);
+  --button-color: white;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--body-background);
+}
+
+.wrapper {
+  width: 450px;
+  background: var(--warpper-background-color);
+  color: var(--warpper-color);
+  border: var(--warpper-border);
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  transition: all 0.5s;
+}
+.wrapper header {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+
+header .icons {
+  display: flex;
+}
+
+header .icons span {
+  position: relative;
+  display: flex;
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: gray;
+  align-items: center;
+  justify-content: center;
+  line-height: 38px;
+  font-size: 28px;
+  user-select: none;
+  transition: background 0.3s;
+  border-radius: 50%;
+}
+
+
+header .icons button {
+  position: relative;
+  display: flex;
+  right: 10px;
+  top: 4px;
+  height: 32px;
+  width: 32px;
+  margin: 0 1px;
+  cursor: pointer;
+  background: var(--button-color) var(--switch-bg-url) no-repeat center;
+  border: 0;
+  align-items: center;
+  justify-content: center;
+  line-height: 38px;
+  font-size: 28px;
+  user-select: none;
+  border-radius: 50%;
+}
+
+header .icons span:hover {
+  background: var(--header-icons-hover);
+}
+
+.icons span:last-child {
+  margin-right: -10px;
+}
+
+header .current-date {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.calendar {
+  padding: 20px;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+
+.calendar .days {
+  margin-bottom: 20px;
+}
+
+.calendar li {
+  color: var(--calendar-li);
+  transition: background 0.3s;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+
+.calendar .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+  background: #3cafcf;
+}
+
+.days li:not(.active):hover::before {
+  background: var(--days-li-not-active-hover-before);
+}

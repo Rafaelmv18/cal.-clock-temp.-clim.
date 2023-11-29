@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="./navi-bar/menu-bar.css" />
+    <link rel="stylesheet" href="calendar/calendar.css">
+  </head>
+  <body>
+    <navi-bar>
+      <div class="navigation">
+        <ul>
+          <li class="list active">
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="alarm-outline"></ion-icon>
+              </span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="thermometer-outline"></ion-icon>
+              </span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="cloud"></ion-icon>
+              </span>
+            </a>
+          </li>  
+          <div id="indicator"><span></span></div>
+        </ul>
+      </div>
+    </navi-bar>
+
+    <calendar>
+        <div class="wrapper">
+          <header>
+            <p class="current-date"></p>
+            <div class="icons">
+              
+              <section onclick="toggleMode()">
+                <button></button>
+              </section>
+              <span id="prev" class="material-symbols-rounded">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+              </span>
+              <span id="next" class="material-symbols-rounded">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </span>
+            </div>
+          </header>
+          <div class="calendar">
+            <ul class="weeks">
+              <li>Sun</li>
+              <li>Mon</li>
+              <li>Tue</li>
+              <li>Wed</li>
+              <li>Thu</li>
+              <li>Fri</li>
+              <li>Sat</li>
+            </ul>
+            <ul class="days"></ul>
+          </div>
+        </div>
+    </calendar>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="calendar/calendar.js"></script>
+    <script src="navi-bar/navi-bar.js"></script>
+  </body>
+</html>
