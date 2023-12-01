@@ -24,15 +24,15 @@
   --indicator-span-background: #ffffff;
 }
 
-body {
+navibar {
   display: flex;
+  padding: 20px;
   justify-content: center;
-  align-items: center;
   background: var(--clr);
-  min-height: 100vh;
 } 
 
-.navigation {
+
+ .navigation {
   position: relative;
   text-align: center;
   width: 300px;
