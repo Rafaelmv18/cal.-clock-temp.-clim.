@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="dark">
+<html lang="pt-br" class="darka">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -80,27 +80,31 @@
 
     <alarm id="alarm-section" class="hidden">
       <div class="relogio">
-        <div class="icons">
-          <section onclick="toggleModed()">
-            <button></button>
-          </section>
-        </div>
-        <config>
+        <header>
+          <div class="icons">
+            <section onclick="toggleMode()">
+              <button></button>
+            </section>
+          </div>
+        </header>
+
+        <clock>
           <div>
             <span id="horas">00</span>
             <span class="tempo">Horas</span>
           </div>
           
-          <div >
+          <div>
             <span id="minutos">00</span>
             <span class="tempo">Minutos</span>
           </div>
           
-          <div >
+          <div>
             <span id="segundos">00</span>
             <span class="tempo">Segundos</span>
           </div>
-        </config>
+          
+        </clock>
       </div>
     </alarm>
 
