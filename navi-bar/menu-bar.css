@@ -24,6 +24,19 @@
   --indicator-span-background: #ffffff;
 }
 
+#calendar-section.hidden {
+  display: none;
+}
+#alarm-section.hidden {
+  display: none;
+}
+#thermometer-section.hidden {
+  display: none;
+}
+#cloud-section.hidden {
+  display: none;
+}
+
 navibar {
   display: flex;
   padding: 20px;

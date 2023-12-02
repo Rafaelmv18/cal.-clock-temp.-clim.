@@ -8,7 +8,7 @@
 
 
 :root {
-  --body-background: grey;
+  --warpper-background: grey;
   --warpper-background-color: #fff;
   --warpper-color: black;
   --warpper-border: 2px solid #333;
@@ -20,7 +20,7 @@
 }
 
 .dark {
-  --body-background: #222;
+  --warpper-background: #222;
   --warpper-background-color: #222;
   --warpper-color: #fff;
   --warpper-border: 2px solid #fff;
@@ -37,7 +37,7 @@ calendar{
   padding: 0 10px;
   justify-content: center;
   min-height: 100vh;
-  background: var(--body-background);
+  background: var(--warpper-background);
 }
 
 .wrapper {
