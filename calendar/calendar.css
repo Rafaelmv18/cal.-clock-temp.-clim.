@@ -4,11 +4,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  transition: backgorund 0.4s ease;
 }
 
 
 :root {
-  --warpper-background: grey;
+  --warpper-background: #F0F8FF;
   --warpper-background-color: #fff;
   --warpper-color: black;
   --warpper-border: 2px solid #333;
@@ -28,7 +29,7 @@
   --calendar-li: #fff;
   --days-li-not-active-hover-before: #333;
   --switch-bg-url: url(sun.svg);
-  --button-color: white;
+  --button-color: #F0F8FF;
 }
 
 calendar{
