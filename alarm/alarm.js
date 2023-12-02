@@ -1,3 +1,9 @@
+function toggleMode() {
+    const html = document.documentElement
+  
+    html.classList.toggle("dark")
+  }
+
 const horas = document.getElementById('horas');
 const minutos = document.getElementById('minutos');
 const segundos = document.getElementById('segundos');

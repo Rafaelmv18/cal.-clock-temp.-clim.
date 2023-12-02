@@ -8,13 +8,10 @@
 }
 
 :root {
-    --alarm-background: grey;
-    --alarm-background-color: #fff;
+    --alarm-background: #F0F8FF;
+    --alarm-background-color: white;
     --alarm-color: black;
     --alarm-border: 2px solid #333;
-    --header-icons-hover: rgba(224, 221, 221, 0.8);
-    --alarm-li: #333;
-    --days-li-not-active-hover-before: #f2f2f2;
     --switch-bg-url: url(moon-stars.svg);
     --button-color: #333;
 }
@@ -24,11 +21,9 @@
     --alarm-background-color: #333;
     --alarm-color: #fff;
     --alarm-border: 2px solid #fff;
-    --header-icons-hover: rgba(255, 255, 255, 0.096);
-    --alarm-li: #fff;
-    --days-li-not-active-hover-before: #333;
+
     --switch-bg-url: url(sun.svg);
-    --button-color: white;
+    --button-color: #F0F8FF;
 }
 
 alarm{
@@ -39,7 +34,7 @@ alarm{
     background: var(--alarm-background); 
 }
 
-.relogio config{
+.relogio clock{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -51,7 +46,7 @@ alarm{
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
 }
 
-.relogio div{
+.relogio clock div{
     display: flex;
     height: 170px;
     width: 150px;
@@ -60,9 +55,25 @@ alarm{
     justify-content: center;
     color: var(--alarm-color);
     background: var(--alarm-background);
-    box-shadow: 5 5px 5px rgba(0, 0, 0, 0.7);
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     letter-spacing: 3px;
+}
+
+.relogio header .icon{
+    display: flex;
+    position: relative; 
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    line-height: 38px;
+    font-size: 28px;
+    user-select: none;
+
+    border-radius: 50%;
 }
 
 .relogio span{
@@ -71,10 +82,5 @@ alarm{
 }
 
 .relogio span.tempo{
-    font-size: 30px;
-}
-
-.relogio .icons button{
-    height: 10px;
-    border: 1px solid red;
+    font-size: 20px;
 }
