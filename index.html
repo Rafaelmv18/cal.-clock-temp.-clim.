@@ -1,38 +1,40 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="pt-br" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calendar</title>
+    <title>Menu</title>
     <link rel="stylesheet" href="./navi-bar/menu-bar.css" />
     <link rel="stylesheet" href="calendar/calendar.css">
+    <link rel="stylesheet" href="./alarm/alarm.css">
+    <link rel="stylesheet" href="./thermometer/thermometer.css">
   </head>
   <body>
     <navibar>
       <div class="navigation">
         <ul>
-          <li class="list active">
+          <li class="list active" onclick="toggleSection('calendar-section', 'alarm-section', 'thermometer-section')">
               <a href="#">
                 <span class="icon">
                   <ion-icon name="calendar-outline"></ion-icon>
                 </span>
               </a>
           </li>
-          <li class="list">
+          <li class="list" onclick="toggleSection('alarm-section', 'calendar-section')">
             <a href="#">
               <span class="icon">
                 <ion-icon name="alarm-outline"></ion-icon>
               </span>
             </a>
           </li>
-          <li class="list">
+          <li class="list" onclick="toggleThermometer('thermometer-section', 'calendar-section')">
             <a href="#">
               <span class="icon">
                 <ion-icon name="thermometer-outline"></ion-icon>
               </span>
             </a>
           </li>
-          <li class="list">
+          <li class="list" onclick="toggleCloud()">
             <a href="#">
               <span class="icon">
                 <ion-icon name="cloud"></ion-icon>
@@ -44,12 +46,11 @@
       </div>
     </navibar>
 
-    <calendar>
+    <calendar id="calendar-section" >
         <div class="wrapper">
           <header>
             <p class="current-date"></p>
             <div class="icons">
-              
               <section onclick="toggleMode()">
                 <button></button>
               </section>
@@ -76,6 +77,44 @@
         </div>
     </calendar>
 
+
+    <alarm id="alarm-section" class="hidden">
+      <div class="relogio">
+        <div class="icons">
+          <section onclick="toggleModed()">
+            <button></button>
+          </section>
+        </div>
+        <config>
+          <div>
+            <span id="horas">00</span>
+            <span class="tempo">Horas</span>
+          </div>
+          
+          <div >
+            <span id="minutos">00</span>
+            <span class="tempo">Minutos</span>
+          </div>
+          
+          <div >
+            <span id="segundos">00</span>
+            <span class="tempo">Segundos</span>
+          </div>
+        </config>
+      </div>
+    </alarm>
+
+
+    <thermometer id="thermometer-section" class="hidden">
+      
+    </thermometer>
+
+    <cloud id="cloud-section" class="hidden">
+      
+    </cloud>
+
+  
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -86,6 +125,6 @@
     ></script>
 
     <script src="calendar/calendar.js"></script>
+    <script src="alarm/alarm.js"></script>
+    <script src="thermometer/thermometer.js"></script>
     <script src="navi-bar/navi-bar.js"></script>
-  </body>
-</html>
