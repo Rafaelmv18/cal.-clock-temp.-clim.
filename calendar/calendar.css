@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  transition: backgorund 0.4s ease;
 }
 
 
@@ -100,6 +99,7 @@ header .icons button {
 
 header .icons span:hover {
   background: var(--header-icons-hover);
+  transition: all 0.5s;
 }
 
 .icons span:last-child {
@@ -171,4 +171,5 @@ header .current-date {
 
 .days li:not(.active):hover::before {
   background: var(--days-li-not-active-hover-before);
+  transition: all 0.5s;
 }
