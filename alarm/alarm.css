@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  transition: background 0.8s;
 }
 
 :root {
@@ -31,14 +32,15 @@ alarm{
     align-items: center;
     justify-content: center;
     height: 100vh;
+    margin: 0px auto 0px;
     background: var(--alarm-background); 
 }
 
-.relogio clock{
+.clock clock{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 200px;
+    height: 250px;
     width: 550px;
     background: transparent;
     border-radius: 10px;
@@ -46,7 +48,7 @@ alarm{
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
 }
 
-.relogio clock div{
+.clock clock div{
     display: flex;
     height: 170px;
     width: 150px;
@@ -60,27 +62,54 @@ alarm{
     letter-spacing: 3px;
 }
 
-.relogio header .icon{
+.clock header button{
     display: flex;
     position: relative; 
-    height: 38px;
-    width: 38px;
+    height: 30px;
+    width: 30px;
+    left: 513px;
+    top: 35px;
     margin: 0 1px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
     line-height: 38px;
-    font-size: 28px;
+    font-size: 1.4em; 
     user-select: none;
 
     border-radius: 50%;
 }
 
-.relogio span{
-    font-size: 60px;
+.clock span{
+    font-size: 3em;
     font-weight: bolder;
 }
 
-.relogio span.tempo{
-    font-size: 20px;
+.clock span.time{
+    font-size: 1em; 
+}
+
+@media screen and (max-width: 768px) {
+    .clock clock{
+        flex-wrap: wrap;
+        padding: 40px 0px 10px;
+        max-width: 550px; 
+        height: 600px;
+        width: 90%;
+        margin: 0 auto;  
+    }
+
+    .clock clock div{
+        width: 90%;
+    }
+    .clock span {
+    font-size: 2em; 
+     }
+
+    .clock header button {
+        position: relative; 
+        left: 190px; 
+        top: 47px;  
+        margin: 10px auto; 
+    }
 }
