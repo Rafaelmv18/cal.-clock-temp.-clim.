@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  transition: background 0.8s;
 }
 :root {
   --clr: #F0F8FF;
@@ -33,7 +34,7 @@
 #thermometer-section.hidden {
   display: none;
 }
-#cloud-section.hidden {
+#calculator-section.hidden {
   display: none;
 }
 
@@ -56,6 +57,7 @@ navibar {
   z-index: 1;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  
 }
 
 .navigation ul {
@@ -113,7 +115,7 @@ navibar {
   background: var(--indicator-span-background);
   border-radius: 50%;
   transform-origin: bottom;
-  transition:  0.5s;
+  
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   transform: scale(0.85);
 
