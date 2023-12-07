@@ -14,4 +14,5 @@ function toggleSection(showId, hideId) {
   // Oculta a outra seção
   var hideSection = document.getElementById(hideId);
   hideSection.classList.add('hidden');
+
 }
