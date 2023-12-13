@@ -6,13 +6,18 @@ function activelink() {
 list.forEach((item) => item.addEventListener("click", activelink))
 
 
-function toggleSection(showId, hideId) {
+function toggleSection(showId, hideId1, hideId2, hideId3) {
   // Mostra a seção clicada
   var showSection = document.getElementById(showId);
   showSection.classList.remove('hidden');
 
-  // Oculta a outra seção
-  var hideSection = document.getElementById(hideId);
-  hideSection.classList.add('hidden');
+  // Oculta as outras seções
+  var hideSection1 = document.getElementById(hideId1);
+  hideSection1.classList.add('hidden');
 
+  var hideSection2 = document.getElementById(hideId2);
+  hideSection2.classList.add('hidden');
+
+  var hideSection3 = document.getElementById(hideId3);
+  hideSection3.classList.add('hidden');
 }
