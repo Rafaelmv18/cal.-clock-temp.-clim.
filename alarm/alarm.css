@@ -5,111 +5,111 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  transition: background 0.8s;
 }
 
 :root {
-    --alarm-background: #F0F8FF;
-    --alarm-background-color: white;
-    --alarm-color: black;
-    --alarm-border: 2px solid #333;
-    --switch-bg-url: url(moon-stars.svg);
-    --button-color: #333;
+  --alarm-background: #f0f8ff;
+  --alarm-background-color: white;
+  --alarm-color: black;
+  --alarm-border: 2px solid #333;
+  --switch-bg-url: url(moon-stars.svg);
+  --button-color: #333;
 }
-  
+
 .dark {
-    --alarm-background: #222;
-    --alarm-background-color: #333;
-    --alarm-color: #fff;
-    --alarm-border: 2px solid #fff;
+  --alarm-background: #222;
+  --alarm-background-color: #333;
+  --alarm-color: #fff;
+  --alarm-border: 2px solid #fff;
 
-    --switch-bg-url: url(sun.svg);
-    --button-color: #F0F8FF;
+  --switch-bg-url: url(sun.svg);
+  --button-color: #f0f8ff;
 }
 
-alarm{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0px auto 0px;
-    background: var(--alarm-background); 
+alarm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0px auto 0px;
+  background: var(--alarm-background);
+  transition: background 0.8s;
 }
 
-.clock clock{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 250px;
-    width: 550px;
-    background: transparent;
-    border-radius: 10px;
-    background: var(--alarm-background-color);
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+.clock clock {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 250px;
+  width: 550px;
+  background: transparent;
+  border-radius: 10px;
+  background: var(--alarm-background-color);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
 }
 
-.clock clock div{
-    display: flex;
-    height: 170px;
-    width: 150px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--alarm-color);
-    background: var(--alarm-background);
-    box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
-    letter-spacing: 3px;
+.clock clock div {
+  display: flex;
+  height: 170px;
+  width: 150px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--alarm-color);
+  background: var(--alarm-background);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  letter-spacing: 3px;
 }
 
-.clock header button{
-    display: flex;
-    position: relative; 
-    height: 30px;
-    width: 30px;
-    left: 513px;
-    top: 35px;
-    margin: 0 1px;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    line-height: 38px;
-    font-size: 1.4em; 
-    user-select: none;
+.clock header button {
+  display: flex;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  left: 513px;
+  top: 35px;
+  margin: 0 1px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  line-height: 38px;
+  font-size: 1.4em;
+  user-select: none;
 
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
-.clock span{
-    font-size: 3em;
-    font-weight: bolder;
+.clock span {
+  font-size: 3em;
+  font-weight: bolder;
 }
 
-.clock span.time{
-    font-size: 1em; 
+.clock span.time {
+  font-size: 1em;
 }
 
 @media screen and (max-width: 768px) {
-    .clock clock{
-        flex-wrap: wrap;
-        padding: 40px 0px 10px;
-        max-width: 550px; 
-        height: 600px;
-        width: 90%;
-        margin: 0 auto;  
-    }
+  .clock clock {
+    flex-wrap: wrap;
+    padding: 40px 0px 10px;
+    max-width: 550px;
+    height: 600px;
+    width: 90%;
+    margin: 0 auto;
+  }
 
-    .clock clock div{
-        width: 90%;
-    }
-    .clock span {
-    font-size: 2em; 
-     }
+  .clock clock div {
+    width: 90%;
+  }
+  .clock span {
+    font-size: 2em;
+  }
 
-    .clock header button {
-        position: relative; 
-        left: 190px; 
-        top: 47px;  
-        margin: 10px auto; 
-    }
+  .clock header button {
+    position: relative;
+    left: 190px;
+    top: 47px;
+    margin: 10px auto;
+  }
 }
