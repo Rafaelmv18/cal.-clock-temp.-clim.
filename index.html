@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./navi-bar/menu-bar.css" />
     <link rel="stylesheet" href="calendar/calendar.css" />
     <link rel="stylesheet" href="./alarm/alarm.css" />
-    <link rel="stylesheet" href="./thermometer/thermometer.css" />
+    <link rel="stylesheet" href="./cloud/cloud.css" />
     <link rel="stylesheet" href="calculator/calculator.css" />
   </head>
   <body>
@@ -16,7 +16,7 @@
         <ul>
           <li
             class="list active"
-            onclick="toggleSection('calendar-section', 'alarm-section', 'thermometer-section', 'calculator-section')"
+            onclick="toggleSection('calendar-section', 'alarm-section', 'cloud-section', 'calculator-section')"
           >
             <a href="#">
               <span class="icon">
@@ -26,7 +26,7 @@
           </li>
           <li
             class="list"
-            onclick="toggleSection('alarm-section', 'calendar-section', 'thermometer-section', 'calculator-section')"
+            onclick="toggleSection('alarm-section', 'calendar-section', 'cloud-section', 'calculator-section')"
           >
             <a href="#">
               <span class="icon">
@@ -46,7 +46,7 @@
           </li>
           <li
             class="list"
-            onclick="toggleSection('calculator-section', 'calendar-section', 'thermometer-section', 'alarm-section')"
+            onclick="toggleSection('calculator-section', 'calendar-section', 'cloud-section', 'alarm-section')"
           >
             <a href="#">
               <span class="icon">
@@ -123,36 +123,37 @@
 
     <calculator id="calculator-section" class="hidden">
       <div class="calculator">
+        <p id="result"></p>
         <table>
           <tr class="button">
-            <td><button>C</button></td>
-            <td><button><</button></td>
+            <td><button onclick="clean()">C</button></td>
+            <td><button onclick="back()"><</button></td>
             <td><button>%</button></td>
-            <td><button>÷</button></td>
+            <td><button onclick="insert('/')">÷</button></td>
           </tr>
           <tr class="button">
-            <td><button>7</button></td>
-            <td><button>8</button></td>
-            <td><button>9</button></td>
-            <td><button>X</button></td>
+            <td><button onclick="insert('7')">7</button></td>
+            <td><button onclick="insert('8')">8</button></td>
+            <td><button onclick="insert('9')">9</button></td>
+            <td><button onclick="insert('*')">X</button></td>
           </tr>
           <tr class="button">
-            <td><button>4</button></td>
-            <td><button>5</button></td>
-            <td><button>6</button></td>
-            <td><button>-</button></td>
+            <td><button onclick="insert('4')">4</button></td>
+            <td><button onclick="insert('5')">5</button></td>
+            <td><button onclick="insert('6')">6</button></td>
+            <td><button onclick="insert('-')">-</button></td>
           </tr>
           <tr class="button">
-            <td><button>1</button></td>
-            <td><button>2</button></td>
-            <td><button>3</button></td>
-            <td><button>+</button></td>
+            <td><button onclick="insert('1')">1</button></td>
+            <td><button onclick="insert('2')">2</button></td>
+            <td><button onclick="insert('3')">3</button></td>
+            <td><button onclick="insert('+')">+</button></td>
           </tr>
           <tr class="button">
             <td><button>+/-</button></td>
-            <td rowspan="2"><button>0</button></td>
-            <td><button>.</button></td>
-            <td colspan="2"><button>=</button></td>
+            <td><button onclick="insert('0')">0</button></td>
+            <td><button onclick="insert('.')">.</button></td>
+            <td><button onclick="igual()">=</button></td>
           </tr>
         </table>
       </div>
@@ -170,7 +171,7 @@
     <script src="navi-bar/navi-bar.js"></script>
     <script src="calendar/calendar.js"></script>
     <script src="alarm/alarm.js"></script>
-    <script src="thermometer/thermometer.js"></script>
+    <script src="cloud/cloud.js"></script>
     <script src="calculator/calculator.js"></script>
   </body>
 </html>
