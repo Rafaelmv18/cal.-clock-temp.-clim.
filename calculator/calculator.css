@@ -42,7 +42,7 @@ button {
   font-size: 20px;
   border: none;
   margin: 3px;
-
+  border: 1px solid var(--soft-high-light);
   background: var(--bg-color);
   color: var(--primary-font-color);
 
@@ -55,16 +55,16 @@ button:hover {
 }
 
 #result {
-  width: 207px;
   height: 50px;
   margin: 5px;
+  margin-bottom: 10px;
   border-radius: 12px;
   transition: 0.1s all ease-in-out;
   height: 65px;
   line-height: 60px;
   text-align: right;
   padding-right: 20px;
-  width: 100%;
+  width: 95%;
   font-size: 32px;
   letter-spacing: 4px;
   box-shadow: 6px 6px 16px 0 var(--dark-high-light),
@@ -74,59 +74,3 @@ button:hover {
   border: 5px solid var(--soft-high-light);
   color: var(--secondary-font-color);
 }
-
-/*
-.neumorphic {
-  box-shadow: 6px 6px 16px 0 var(--dark-high-light),
-    -6px -6px 16px 0 var(--soft-high-light);
-  border-radius: 50%;
-  transition: 0.1s all ease-in-out;
-  border: 1px solid var(--soft-high-light);
-}
-
-.neumorphic:hover {
-  box-shadow: inset 6px 6px 5px 0 var(--dark-high-light),
-    inset -6px -6px 5px 0 var(--soft-high-light);
-  color: var(--secondary-font-color);
-}
-
-calculator {
-  display: grid;
-  width: 100vw;
-  height: 100vh;
-  align-items: center;
-  justify-items: center;
-  font-size: 16px;
-}
-
-.display {
-  box-shadow: 6px 6px 16px 0 var(--dark-high-light),
-    -6px -6px 16px 0 var(--soft-high-light),
-    inset 6px 6px 5px 0 var(--dark-high-light),
-    inset -6px -6px 5px 0 var(--soft-high-light);
-  border: 5px solid var(--soft-high-light);
-  color: var(--secondary-font-color);
-
-  border-radius: 12%;
-  height: 65px;
-  transition: 0.3s;
-  line-height: 60px;
-  padding: 20px;
-  width: 100%;
-  font-size: 32px;
-  letter-spacing: 4px;
-}
-
-.calculator {
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "toggle toggle toggle toggle" "display display display display" "c signed percent divide" "seven eight nine times" "four five six minus" "one two three plus" "zero zero decimal equals";
-  align-items: center;
-  justify-items: center;
-  grid-row-gap: 25px;
-  grid-column-gap: 25px;
-  border-radius: 20px;
-  padding: 50px 40px 40px 40px;
-} */
