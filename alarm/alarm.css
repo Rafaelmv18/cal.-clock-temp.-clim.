@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  transition: background 0.8s;
 }
 
 :root {
@@ -33,7 +34,6 @@ alarm {
   height: 100vh;
   margin: 0px auto 0px;
   background: var(--alarm-background);
-  transition: background 0.8s;
 }
 
 .clock clock {
